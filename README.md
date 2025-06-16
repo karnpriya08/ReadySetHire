@@ -68,9 +68,9 @@
 
 ---
 
-## 📁 folder Structure
+## 📁 Folder Structure
 
-
+```bash
 Readysethire/
 ├── client/              # Frontend React app
 │   ├── public/          # Public assets (favicon, index.html, etc.)
@@ -94,7 +94,6 @@ Readysethire/
 ├── .env                 # Environment variables (not committed)
 ├── README.md            # Project documentation
 └── package.json         # Project dependencies and scripts
-
 
 
 
