@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
 // Images for upcoming and completed interviews
-import upcomingImg from '../../assets/images/interviewBG.jpeg';
+import upcomingImg from '../../assets/images/InterviewBG.jpeg';
 import completedImg from '../../assets/images/interviewBG2.jpeg';
 
 const MyInterviews = () => {
