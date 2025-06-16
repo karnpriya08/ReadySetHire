@@ -1,0 +1,312 @@
+[
+  {
+    "category": "frontend",
+    "question": "What is JavaScript?",
+    "answer": "JavaScript is a programming language used to create dynamic web pages."
+  },
+  {
+    "category": "frontend",
+    "question": "What is the difference between `var`, `let`, and `const` in JavaScript?",
+    "answer": "`var` is function-scoped, `let` and `const` are block-scoped. `const` cannot be reassigned."
+  },
+  {
+    "category": "backend",
+    "question": "What is Node.js?",
+    "answer": "Node.js is a JavaScript runtime environment that runs on the V8 engine, used to build scalable network applications."
+  },
+  {
+    "category": "backend",
+    "question": "What is the purpose of Express.js?",
+    "answer": "Express.js is a web framework for Node.js that simplifies the creation of server-side applications."
+  },
+  {
+    "category": "fullstack",
+    "question": "What is the difference between frontend and backend?",
+    "answer": "Frontend is the client-side part of a web application that users interact with, while backend is the server-side where the business logic runs and data is stored."
+  },
+  {
+    "category": "fullstack",
+    "question": "What are REST APIs?",
+    "answer": "REST (Representational State Transfer) APIs are used to build web services that can communicate over HTTP."
+  },
+  {
+    "category": "behavioral",
+    "question": "Tell me about a time you faced a challenge at work.",
+    "answer": "I faced a situation where the project was behind schedule, but I managed to prioritize tasks and communicate effectively with the team to meet the deadline."
+  },
+  {
+    "category": "behavioral",
+    "question": "How do you handle stressful situations?",
+    "answer": "I stay calm, break down the task into smaller parts, and tackle them one by one while keeping the team informed."
+  },
+  {
+    "category": "frontend",
+    "question": "What are closures in JavaScript?",
+    "answer": "A closure is a function that retains access to its lexical scope even when the function is executed outside that scope."
+  },
+  {
+    "category": "backend",
+    "question": "What is MongoDB?",
+    "answer": "MongoDB is a NoSQL database that stores data in a flexible, JSON-like format called BSON."
+  },
+  {
+    "category": "fullstack",
+    "question": "What is JWT and why is it used?",
+    "answer": "JWT (JSON Web Token) is used for securely transmitting information between a client and a server as a JSON object, often for authentication."
+  },
+  {
+    "category": "behavioral",
+    "question": "Tell me about a time you made a mistake at work and how you handled it.",
+    "answer": "I made an error in a code merge that caused an issue, but I took responsibility and quickly worked with the team to resolve it."
+  },
+  {
+    "category": "frontend",
+    "question": "What is the difference between `==` and `===` in JavaScript?",
+    "answer": "`==` allows type coercion; `===` requires both value and type to be equal."
+  },
+  {
+    "category": "frontend",
+    "question": "What is the box model in CSS?",
+    "answer": "It includes margins, borders, padding, and the actual content."
+  },
+  {
+    "category": "frontend",
+    "question": "How does useEffect work in React?",
+    "answer": "It performs side effects after rendering like data fetching, subscriptions, etc."
+  },
+  {
+    "category": "frontend",
+    "question": "Explain controlled vs uncontrolled components in React.",
+    "answer": "Controlled components use state, uncontrolled use refs to access DOM directly."
+  },
+  {
+    "category": "backend",
+    "question": "What is middleware in Express.js?",
+    "answer": "Middleware functions handle requests before they reach the route handler."
+  },
+  {
+    "category": "backend",
+    "question": "What is the purpose of MongoDB indexes?",
+    "answer": "Indexes improve query performance by allowing faster search."
+  },
+  {
+    "category": "backend",
+    "question": "What is the difference between PUT and PATCH?",
+    "answer": "PUT replaces the whole resource, PATCH updates only the specified fields."
+  },
+  {
+    "category": "backend",
+    "question": "What is CORS and how do you handle it?",
+    "answer": "CORS controls access to resources from other origins; handled using middleware."
+  },
+  {
+    "category": "fullstack",
+    "question": "What is JWT?",
+    "answer": "JWT is a token used for securely transmitting information between parties."
+  },
+  {
+    "category": "fullstack",
+    "question": "What is the role of Redux in a full stack app?",
+    "answer": "Redux manages and centralizes the application state for predictable behavior."
+  },
+  {
+    "category": "fullstack",
+    "question": "What are environment variables?",
+    "answer": "Variables like DB URI, secrets stored securely outside the code."
+  },
+  {
+    "category": "fullstack",
+    "question": "Explain RESTful API design.",
+    "answer": "REST uses standard HTTP methods for CRUD operations with stateless communication."
+  },
+  {
+    "category": "behavioral",
+    "question": "Tell me about a time you had to meet a tight deadline.",
+    "answer": "I broke down tasks, prioritized, and focused on key deliverables to finish on time."
+  },
+  {
+    "category": "behavioral",
+    "question": "How do you handle negative feedback?",
+    "answer": "I reflect, ask clarifying questions, and take action to improve."
+  },
+  {
+    "category": "behavioral",
+    "question": "Tell me about a team conflict and how you resolved it.",
+    "answer": "I facilitated open discussion to find common ground and realign goals."
+  },
+  {
+    "category": "behavioral",
+    "question": "Describe a time you took initiative.",
+    "answer": "I proposed and implemented a feature that reduced load time by 30%."
+  },
+  {
+    "category": "frontend",
+    "question": "What is lazy loading?",
+    "answer": "It delays loading of non-critical resources at page load time."
+  },
+  {
+    "category": "backend",
+    "question": "How do you structure error handling in Node.js?",
+    "answer": "Using try/catch blocks and centralized error middleware."
+  },
+  {
+    "category": "fullstack",
+    "question": "What is optimistic vs pessimistic UI updates?",
+    "answer": "Optimistic assumes success and updates immediately; pessimistic waits for server confirmation."
+  },
+  {
+    "category": "behavioral",
+    "question": "Describe a time when you failed and what you learned.",
+    "answer": "I failed a deployment due to missed tests and learned to always test before release."
+  },
+  {
+    "category": "frontend",
+    "question": "What is a virtual DOM and how does React use it?",
+    "answer": "The virtual DOM is a lightweight in-memory representation of the real DOM. React uses it to update only changed elements efficiently."
+  },
+  {
+    "category": "frontend",
+    "question": "What is the difference between inline, block, and inline-block elements in CSS?",
+    "answer": "Inline doesn't start on a new line, block takes the full width, and inline-block is like inline but allows width/height styling."
+  },
+  {
+    "category": "frontend",
+    "question": "Explain the concept of prop drilling in React.",
+    "answer": "Prop drilling is passing props through multiple components even if only one child needs it."
+  },
+  {
+    "category": "frontend",
+    "question": "What is the difference between useState and useRef?",
+    "answer": "`useState` causes re-render on change; `useRef` holds mutable value without re-rendering."
+  },
+  {
+    "category": "backend",
+    "question": "What is event loop in Node.js?",
+    "answer": "It handles asynchronous callbacks in Node.js using a single-threaded non-blocking mechanism."
+  },
+  {
+    "category": "backend",
+    "question": "Explain the difference between SQL and NoSQL databases.",
+    "answer": "SQL databases are relational, table-based; NoSQL databases like MongoDB are document or key-value based and more flexible."
+  },
+  {
+    "category": "backend",
+    "question": "What is the purpose of using environment variables?",
+    "answer": "They securely store sensitive data like API keys, secrets, and database URIs outside source code."
+  },
+  {
+    "category": "backend",
+    "question": "What are Promises in JavaScript?",
+    "answer": "Promises represent eventual completion (or failure) of an asynchronous operation and its resulting value."
+  },
+  {
+    "category": "fullstack",
+    "question": "What is hydration in server-side rendering (SSR)?",
+    "answer": "Hydration is when client-side JavaScript takes over the static content rendered by server and makes it interactive."
+  },
+  {
+    "category": "fullstack",
+    "question": "How would you protect sensitive routes in a MERN stack app?",
+    "answer": "Use JWT-based authentication middleware in the backend and protected routes in frontend with React Router."
+  },
+  {
+    "category": "fullstack",
+    "question": "What is throttling vs debouncing?",
+    "answer": "Throttling limits calls over time, debouncing delays execution until after a pause in input events."
+  },
+  {
+    "category": "fullstack",
+    "question": "Explain MVC architecture.",
+    "answer": "MVC stands for Model-View-Controller; it's a pattern for separating data (Model), UI (View), and logic (Controller)."
+  },
+  {
+    "category": "behavioral",
+    "question": "How do you handle multiple priorities in a project?",
+    "answer": "I evaluate deadlines and impact, break down tasks, and allocate time blocks accordingly."
+  },
+  {
+    "category": "behavioral",
+    "question": "Describe a challenging bug you fixed.",
+    "answer": "I once resolved a memory leak by tracing unmounted components still updating state using useEffect cleanup."
+  },
+  {
+    "category": "behavioral",
+    "question": "What motivates you as a developer?",
+    "answer": "Solving real-world problems, continuous learning, and contributing to meaningful products."
+  },
+  {
+    "category": "behavioral",
+    "question": "How do you stay updated with technology?",
+    "answer": "Reading blogs, following GitHub trends, newsletters, and building side projects."
+  },
+  {
+    "category": "frontend",
+    "question": "What are React fragments and why are they useful?",
+    "answer": "React fragments let you group multiple elements without adding extra DOM nodes."
+  },
+  {
+    "category": "backend",
+    "question": "How does authentication differ from authorization?",
+    "answer": "Authentication verifies identity, authorization checks permissions for actions/resources."
+  },
+  {
+    "category": "fullstack",
+    "question": "What tools can you use to test APIs?",
+    "answer": "Postman, Insomnia, Jest (with Supertest), or browser fetch/XHR for basic testing."
+  },
+  {
+    "category": "backend",
+    "question": "What are the common HTTP status codes you use?",
+    "answer": "200 (OK), 201 (Created), 400 (Bad Request), 401 (Unauthorized), 403 (Forbidden), 404 (Not Found), 500 (Server Error)."
+  },
+  {
+    "category": "frontend",
+    "question": "What is the difference between controlled and uncontrolled components in React?",
+    "answer": "Controlled components are bound to state and managed by React, while uncontrolled components rely on the DOM for their state."
+  },
+  {
+    "category": "frontend",
+    "question": "How does CSS specificity work?",
+    "answer": "CSS specificity determines which rule is applied by assigning weights to selectors; inline styles > IDs > classes > elements."
+  },
+  {
+    "category": "backend",
+    "question": "What is middleware in Express.js?",
+    "answer": "Middleware functions in Express have access to request and response objects and are used for tasks like authentication and logging."
+  },
+  {
+    "category": "backend",
+    "question": "What is the difference between PUT and PATCH HTTP methods?",
+    "answer": "PUT replaces the entire resource, whereas PATCH updates specific fields of a resource."
+  },
+  {
+    "category": "fullstack",
+    "question": "What is CORS and why is it important?",
+    "answer": "CORS (Cross-Origin Resource Sharing) controls how resources are shared between different origins to prevent unauthorized access."
+  },
+  {
+    "category": "fullstack",
+    "question": "How can you improve web app performance?",
+    "answer": "By code-splitting, lazy loading, caching, reducing API calls, and optimizing images and assets."
+  },
+  {
+    "category": "behavioral",
+    "question": "Describe a time you worked on a team project and faced conflict.",
+    "answer": "We had differing opinions on tech stack; I facilitated a discussion to evaluate pros and cons objectively and reached consensus."
+  },
+  {
+    "category": "behavioral",
+    "question": "How do you handle tight deadlines?",
+    "answer": "I prioritize key tasks, communicate scope clearly, avoid perfectionism initially, and deliver a working MVP first."
+  },
+  {
+    "category": "frontend",
+    "question": "What is lazy loading in React?",
+    "answer": "Lazy loading defers loading of components or resources until they are needed, improving initial load performance."
+  },
+  {
+    "category": "backend",
+    "question": "How do you handle errors in async/await functions?",
+    "answer": "Wrap the function in a try/catch block to gracefully handle and log errors."
+  }
+]

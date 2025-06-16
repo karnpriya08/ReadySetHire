@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Understanding JavaScript Closures",
+    "content": "A closure is the combination of a function bundled together with references to its surrounding state (the lexical environment). In JavaScript, closures are created every time a function is created, at function creation time.",
+    "category": "frontend",
+    "image": "https://example.com/images/js-closures.jpg",
+    "date": "2025-05-01"
+  },
+  {
+    "title": "Top 10 CSS Best Practices",
+    "content": "CSS is a styling language, and like any language, there are some best practices you should follow to ensure your code is clean and maintainable. In this blog, we'll discuss 10 CSS best practices to make your website faster and cleaner.",
+    "category": "frontend",
+    "image": "https://example.com/images/css-best-practices.jpg",
+    "date": "2025-05-02"
+  },
+  {
+    "title": "Node.js vs Deno: What's the Difference?",
+    "content": "Node.js and Deno are both runtime environments that allow you to run JavaScript outside of a browser. While Node.js is more widely adopted, Deno offers some new features and improvements. Let's explore their differences.",
+    "category": "backend",
+    "image": "https://example.com/images/node-vs-deno.jpg",
+    "date": "2025-05-03"
+  },
+  {
+    "title": "Asynchronous Programming in JavaScript",
+    "content": "Asynchronous programming allows you to handle operations that would normally block the execution of your program, such as reading a file or fetching data from a server. This blog will walk through different ways to handle asynchronous code in JavaScript.",
+    "category": "frontend",
+    "image": "https://example.com/images/async-programming.jpg",
+    "date": "2025-05-04"
+  },
+  {
+    "title": "Understanding REST APIs",
+    "content": "A REST API is an architectural style for an API that follows certain principles such as stateless communication and use of HTTP methods. In this blog, we'll break down what makes RESTful APIs so powerful and why they are widely used in web development.",
+    "category": "fullstack",
+    "image": "https://example.com/images/rest-apis.jpg",
+    "date": "2025-05-05"
+  },
+  {
+    "title": "Microservices vs Monolithic Architecture",
+    "content": "In modern software development, choosing the right architecture can be challenging. In this blog, we explore the key differences between microservices and monolithic architecture, their advantages, and when to use them.",
+    "category": "backend",
+    "image": "https://example.com/images/microservices-vs-monolithic.jpg",
+    "date": "2025-05-06"
+  },
+  {
+    "title": "Introduction to Full Stack Development",
+    "content": "Full Stack Development involves both frontend and backend development, and in this blog, we'll dive into the key tools and technologies you should be familiar with to become a successful Full Stack Developer.",
+    "category": "fullstack",
+    "image": "https://example.com/images/fullstack-development.jpg",
+    "date": "2025-05-07"
+  },
+  {
+    "title": "Why Agile Methodology is Important",
+    "content": "Agile methodology is a modern approach to software development that allows teams to deliver high-quality products faster and more efficiently. In this blog, we’ll cover the key principles and benefits of Agile development.",
+    "category": "behavioral",
+    "image": "https://example.com/images/agile-methodology.jpg",
+    "date": "2025-05-08"
+  },
+  {
+    "title": "5 Tips to Ace Your Coding Interview",
+    "content": "Preparing for a coding interview can be stressful. In this blog, we’ll share 5 tips that will help you ace your coding interview and stand out to your future employer.",
+    "category": "behavioral",
+    "image": "https://example.com/images/ace-coding-interview.jpg",
+    "date": "2025-05-09"
+  },
+  {
+    "title": "Understanding HTTP Requests and Responses",
+    "content": "In this blog, we’ll break down the components of HTTP requests and responses. We’ll cover the different HTTP methods and status codes, as well as what they mean and how to use them effectively in web development.",
+    "category": "fullstack",
+    "image": "https://example.com/images/http-requests.jpg",
+    "date": "2025-05-10"
+  }
+]

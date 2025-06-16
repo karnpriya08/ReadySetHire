@@ -1,0 +1,18 @@
+# Node dependencies
+node_modules
+client/node_modules
+server/node_modules
+
+# Vite build output
+client/dist
+
+# Logs
+*.log
+
+# dotenv secrets
+.env
+server/.env
+client/.env
+
+
+server/firebase/serviceaccountkey.json

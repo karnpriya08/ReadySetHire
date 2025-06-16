@@ -1,0 +1,39 @@
+//action types for Login
+export const LOGIN_REQUEST = 'LOGIN_REQUEST';
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+export const LOGIN_FAIL = 'LOGIN_FAIL';
+
+// action types for Registration
+export const REGISTER_REQUEST = 'REGISTER_REQUEST';
+export const REGISTER_SUCCESS = 'REGISTER_SUCCESS';
+export const REGISTER_FAIL = 'REGISTER_FAIL';
+export const REGISTER_RESET = "REGISTER_RESET";
+
+
+// for logout
+export const LOGOUT = 'LOGOUT';
+
+// for scheduling interviews 
+export const INTERVIEW_SCHEDULE_REQUEST = 'INTERVIEW_SCHEDULE_REQUEST';
+export const INTERVIEW_SCHEDULE_SUCCESS = 'INTERVIEW_SCHEDULE_SUCCESS';
+export const INTERVIEW_SCHEDULE_FAIL = 'INTERVIEW_SCHEDULE_FAIL';
+
+// for fetching interviews 
+export const FETCH_INTERVIEWS_REQUEST = 'FETCH_INTERVIEWS_REQUEST';
+export const FETCH_INTERVIEWS_SUCCESS = 'FETCH_INTERVIEWS_SUCCESS';
+export const FETCH_INTERVIEWS_FAIL = 'FETCH_INTERVIEW_FAIL'
+
+// for User Update
+export const USER_UPDATE_REQUEST = 'USER_UPDATE_REQUEST';
+export const USER_UPDATE_SUCCESS = ' USER_UPATE_SUCCESS';
+export const USER_UPDATE_FAIL = ' USER_UPADTE_FAIL';
+
+// to get user profile 
+export const USER_PROFILE_REQUEST = 'USER_PROFILE_REQUEST';
+export const USER_PROFILE_SUCCESS ='USER_PROFILE_SUCCESS';
+export const  USER_PROFILE_FAIL ='USER_PROFILE_FAIL';
+
+// for resume upload 
+export const RESUME_UPLOAD_REQUEST = 'RESUME_UPLOAD_REQUEST';
+export const RESUME_UPLOAD_SUCCESS = 'RESUME_UPLOAD_SUCCESS';
+export const RESUME_UPLOAD_FAIL = 'RESUME_UPLOAD_FAIL';
