@@ -70,28 +70,29 @@
 
 ## 📁 folder Structure
 Readysethire/
-├── client/ # Frontend React app
-│ ├── public/ # Public assets (favicon, index.html, etc.)
-│ ├── src/ # Source code
-│ │ ├── assets/ # Images, icons, fonts
-│ │ ├── components/ # Reusable React components
-│ │ ├── pages/ # Page-level components
-│ │ ├── redux/ # Redux store, actions, reducers
-│ │ ├── utils/ # Utility functions/helpers
-│ │ ├── firebase.js # Firebase client config
-│ │ └── ... # Other frontend source files
-├── server/ # Backend server
-│ ├── config/ # Configuration (DB, env variables)
-│ ├── controllers/ # Request handlers / business logic
-│ ├── firebase/ # Firebase admin setup and utilities
-│ ├── middleware/ # Express middlewares
-│ ├── models/ # Database models (Mongoose schemas)
-│ ├── routes/ # API route definitions
-│ ├── uploads/ # Uploaded files (resumes, images, etc.)
-│ └── server.js # Express server entry point
-├── .env # Environment variables (not committed)
-├── README.md # Project documentation
-└── package.json # Project dependencies and scripts
+├── client/              # Frontend React app
+│   ├── public/          # Public assets (favicon, index.html, etc.)
+│   ├── src/             # Source code
+│   │   ├── assets/      # Images, icons, fonts
+│   │   ├── components/  # Reusable React components
+│   │   ├── pages/       # Page-level components
+│   │   ├── redux/       # Redux store, actions, reducers
+│   │   ├── utils/       # Utility functions/helpers
+│   │   ├── firebase.js  # Firebase client config
+│   │   └── ...          # Other frontend source files
+├── server/              # Backend server
+│   ├── config/          # Configuration (DB, env variables)
+│   ├── controllers/     # Request handlers / business logic
+│   ├── firebase/        # Firebase admin setup and utilities
+│   ├── middleware/      # Express middlewares
+│   ├── models/          # Database models (Mongoose schemas)
+│   ├── routes/          # API route definitions
+│   ├── uploads/         # Uploaded files (resumes, images, etc.)
+│   └── server.js        # Express server entry point
+├── .env                 # Environment variables (not committed)
+├── README.md            # Project documentation
+└── package.json         # Project dependencies and scripts
+
 
 
 
