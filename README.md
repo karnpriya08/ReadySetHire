@@ -69,6 +69,7 @@
 ---
 
 ## 📁 folder Structure
+
 Readysethire/
 ├── client/              # Frontend React app
 │   ├── public/          # Public assets (favicon, index.html, etc.)
