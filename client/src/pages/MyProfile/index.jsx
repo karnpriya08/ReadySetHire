@@ -47,7 +47,7 @@ const index = () => {
         contact: user.contact || '',
         dob: user.dob ? user.dob.split('T')[0] : ''
       });
-      setPreview(user.profileImage ? `http://localhost:3001${user.profileImage}` : Avatar);
+      setPreview(user.profileImage ? `https://readysethire-roqk.onrender.com${user.profileImage}` : Avatar);
     }
   }, [user]);
 
