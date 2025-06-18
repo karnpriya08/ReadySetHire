@@ -8,107 +8,127 @@ import { FaTimes } from 'react-icons/fa';
 import { logout } from '../../redux/actions/authActions';
 import toast from 'react-hot-toast';
 
-const index = () => {
-
+const Header = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  // getting useinfo from redux 
-  // const userInfo = useSelector((state) => state.auth.userInfo);
-  // const isLoggedIn = !!userInfo?.token;
 
   const token = useSelector((state) => state.auth.token);
-const isLoggedIn = !!token;
+  const user = useSelector((state) => state.auth.user);  // make sure user is in auth state
+  const isLoggedIn = !!token;
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  // user button handling
+  const backendUrl = "https://readysethire-roqk.onrender.com"; // your backend base URL
+
   const handleClick = () => {
     setModalOpen(!modalOpen);
-  }
-  // hamburger button handling
+    setMenuOpen(false);
+  };
+
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen)
-  }
-  // handle logout
+    setMenuOpen(!menuOpen);
+    setModalOpen(false);
+  };
+
   const handleLogout = () => {
     dispatch(logout());
-    toast.success("successfully logged out")
-    setModalOpen(false); 
-    navigate('/login')
-  }
+    toast.success("Successfully logged out");
+    setModalOpen(false);
+    navigate('/login');
+  };
+
+  const closeAllMenus = () => {
+    setModalOpen(false);
+    setMenuOpen(false);
+  };
 
   return (
     <>
-      <header className='fixed top-0 left-0 w-full bg-cyan-800 text-lime-200  flex justify-between z-50'>
+      <header className='fixed top-0 left-0 w-full bg-cyan-800 text-lime-200 flex justify-between items-center z-50 p-2 px-4'>
         {/* logo section */}
-        <Link to='/'>
-          <section className='flex ml-2 p-2'>
-            <img src={Image} alt="logo" width={75} height={75} className='hover:scale-105' />
-            <div className='p-1.5 hover:scale-105'>
-              <h1 className='px-8'>ReadySetHire</h1>
-              <p className='text-shadow-xs  text-xs '>clear steps toward sucess</p>
-            </div>
-          </section>
+        <Link to='/' className='flex items-center gap-3 hover:scale-105 transition'>
+          <img src={Image} alt="logo" width={60} height={60} />
+          <div>
+            <h1 className='text-lg font-semibold'>ReadySetHire</h1>
+            <p className='text-xs'>Clear steps toward success</p>
+          </div>
         </Link>
-        {/* for desktop view  */}
-        <nav className='p-5'>
-          <ul className='hidden md:flex justify-between gap-8 '>
-            <li><Link to='/'>Schedule</Link></li>
-            <li><Link to='/interviews'> My Interviews</Link></li>
-            <li><Link to='/questions'>Practice Resources</Link></li>
-          </ul>
+
+        {/* desktop nav */}
+        <nav className='hidden md:flex gap-6 items-center'>
+          <Link to='/' className='hover:text-white transition focus:outline-none focus:ring-2 focus:ring-lime-400'>Schedule</Link>
+          <Link to='/interviews' className='hover:text-white transition focus:outline-none focus:ring-2 focus:ring-lime-400'>My Interviews</Link>
+          <Link to='/questions' className='hover:text-white transition focus:outline-none focus:ring-2 focus:ring-lime-400'>Practice Resources</Link>
         </nav>
-        {/* profile logo with drop down */}
-        <button aria-label="user menu" className='p-5 px-10' onClick={handleClick} >
-          <PiUserCircleFill className='text-3xl hover:text-white'/>
+
+        {/* profile icon */}
+        <button
+          aria-label="User menu"
+          onClick={handleClick}
+          className='p-2 focus:outline-none focus:ring-2 focus:ring-lime-400'
+        >
+          {user && user.profileImage ? (
+            <img
+              src={backendUrl + user.profileImage}
+              alt="User profile"
+              className='w-8 h-8 rounded-full object-cover'
+            />
+          ) : (
+            <PiUserCircleFill className='text-3xl hover:text-white transition' />
+          )}
         </button>
-        {/* hamburger button */}
-        <button aria-label="menu toggle" className='md:hidden p-6 text-xl hover:text-white' onClick={toggleMenu}>
-          {menuOpen ? <FaTimes className='text-xl' /> : <IoReorderThreeOutline className='text-2xl' />}
-        </button> 
-        {/* navbar ends */}
+
+        {/* hamburger menu */}
+        <button
+          aria-label="Toggle navigation"
+          onClick={toggleMenu}
+          className='md:hidden p-2 text-2xl hover:text-white focus:outline-none focus:ring-2 focus:ring-lime-400'
+        >
+          {menuOpen ? <FaTimes /> : <IoReorderThreeOutline />}
+        </button>
       </header>
 
-      {/* DROPDOWN OF PROFILE  */}
+      {/* backdrop for dropdowns */}
+      {(modalOpen || menuOpen) && (
+        <div
+          className='fixed inset-0 z-40 bg-black/50'
+          onClick={closeAllMenus}
+        ></div>
+      )}
+
+      {/* profile dropdown */}
       {modalOpen && (
-        <div className="fixed top-[70px] right-4 bg-white w-1/2 md:w-1/3 lg:w-1/4 rounded-lg shadow-xl p-5 z-[100]" >      
+        <div className="fixed top-[70px] right-4 bg-white w-1/2 md:w-1/3 lg:w-1/4 rounded-lg shadow-xl p-4 z-50">
           <ul>
             {isLoggedIn ? (
               <>
-                <Link to="/profile"><li className="text-cyan-400 hover:scale-105 m-1">My Profile</li></Link>
-                <li className="text-cyan-400 hover:scale-105 m-1" onClick={handleLogout}>Logout</li>
+                <Link to="/profile"><li className="text-cyan-400 hover:bg-cyan-50 p-2 rounded">My Profile</li></Link>
+                <li className="text-cyan-400 hover:bg-cyan-50 p-2 rounded cursor-pointer" onClick={handleLogout}>Logout</li>
               </>
             ) : (
               <>
-                <Link to="/register"><li onClick={handleClick} className="text-cyan-400 hover:scale-105 m-1">Register</li></Link>
-                <Link to="/login"><li onClick={handleClick} className="text-cyan-400 hover:scale-105 m-1">Login</li></Link>
+                <Link to="/register"><li onClick={handleClick} className="text-cyan-400 hover:bg-cyan-50 p-2 rounded">Register</li></Link>
+                <Link to="/login"><li onClick={handleClick} className="text-cyan-400 hover:bg-cyan-50 p-2 rounded">Login</li></Link>
               </>
             )}
           </ul>
         </div>
       )}
-      {/* mobile navigations  */}
-      {menuOpen &&
-        (<nav data-testid="mobile-menu" className='fixed bg-white w-1/2 top-[70px] left-1/2 p-2 rounded-lg shadow-xl z-[100]'>
-          <ul className='p-2 m-1'>
-            <Link to='/'>
-              <li className='text-cyan-400 hover:scale-105 m-1'
-                onClick={toggleMenu}>Schedule</li></Link>
-            <Link to='/interviews'>
-              <li className='text-cyan-400 hover:scale-105 m-1'
-                onClick={toggleMenu}>My Interviews</li></Link>
-            <Link to='/questions'>
-              <li className='text-cyan-400 hover:scale-105 m-1'
-                onClick={toggleMenu}>Practice Resources</li></Link>
-            <Link to='/about'>
-              <li className='text-cyan-400 hover:scale-105 m-1'
-                onClick={toggleMenu}>About Us</li></Link>
-          </ul>
-        </nav>)
-      }
-    </>
-  )
-}
 
-export default index;
+      {/* mobile navigation */}
+      {menuOpen && (
+        <nav className='fixed bg-white w-64 top-[70px] left-1/2 -translate-x-1/2 p-4 rounded-lg shadow-xl z-50'>
+          <ul className='flex flex-col gap-2'>
+            <Link to='/'><li className='text-cyan-400 hover:bg-cyan-50 p-2 rounded' onClick={toggleMenu}>Schedule</li></Link>
+            <Link to='/interviews'><li className='text-cyan-400 hover:bg-cyan-50 p-2 rounded' onClick={toggleMenu}>My Interviews</li></Link>
+            <Link to='/questions'><li className='text-cyan-400 hover:bg-cyan-50 p-2 rounded' onClick={toggleMenu}>Practice Resources</li></Link>
+            <Link to='/about'><li className='text-cyan-400 hover:bg-cyan-50 p-2 rounded' onClick={toggleMenu}>About Us</li></Link>
+          </ul>
+        </nav>
+      )}
+    </>
+  );
+};
+
+export default Header;

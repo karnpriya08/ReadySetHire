@@ -19,10 +19,16 @@ a {
   font-weight: 500;
   color: #99ff3a;
   text-decoration: inherit;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 a:hover {
   color: white;
   transform: scale(1.05);
+}
+
+a:focus-visible {
+  outline: 3px solid #99ff3a;
+  outline-offset: 2px;
 }
 
 /* body {
@@ -51,21 +57,36 @@ button {
 }
 button:hover {
   border-color: #1e90ad;
+  box-shadow: 0 4px 6px rgba(30, 144, 173, 0.3);
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
-/* @media (prefers-color-scheme: light) {
+/* 
+@media (prefers-color-scheme: dark) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: #d9f99d;
+    background-color: #1a202c;
   }
   a:hover {
-    color: #747bff;
+    color: #bbf7d0; 
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #2d3748;
+    color: #a0aec0;
+  }
+  button:hover {
+    border-color: #68d391;
+    box-shadow: 0 4px 6px rgba(104, 211, 145, 0.3);
   }
 } */
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.text-404 {
+  animation: bounce 2s infinite;
+}

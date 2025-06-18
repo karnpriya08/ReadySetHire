@@ -3,9 +3,10 @@ import React, { useEffect, useState } from 'react';
 import QuestionCard from './component/QuestionCard';
 import BlogCard from './component/BlogCard';
 import API from '../../utils/axios';
+import Loader from '../../component/Loader';
 
 const QuestionPage = () => {
-    
+
     const [category, setCategory] = useState('frontend');
     const [questions, setQuestions] = useState([]);
     const [blogs, setBlogs] = useState([]);
@@ -92,22 +93,39 @@ const QuestionPage = () => {
                 {/*  Questions Section */}
                 <section className="w-full lg:w-2/3 m-3 p-1 rounded shadow">
                     {loadingQuestions ? (
-                        <p className="text-center text-gray-600">Loading questions...</p>
+                        <Loader />
                     ) : questions.length === 0 ? (
-                        <p className="text-center text-gray-600">No questions found.</p>
+                        <div className="text-center py-10 px-4">
+                            <img
+                                src="https://cdni.iconscout.com/illustration/premium/thumb/empty-box-2130356-1800926.png"
+                                alt="No Questions"
+                                className="w-40 h-40 mx-auto opacity-80"
+                            />
+                            <h2 className="text-xl font-semibold text-gray-700 mt-4">Oops! No Questions Available</h2>
+                            <p className="text-gray-500 mt-1">Try selecting a different category or refresh the page.</p>
+                        </div>
                     ) : (
                         questions.map((question, index) => (
                             <QuestionCard question={question} key={question._id} index={index} />
                         ))
                     )}
+
                 </section>
 
                 {/*  Blogs Section */}
                 <section className="w-full lg:w-1/3 m-3 p-1 rounded shadow-xl">
                     {loadingBlogs ? (
-                        <p className="text-center text-gray-600">Loading blogs...</p>
+                        <Loader />
                     ) : blogs.length === 0 ? (
-                        <p className="text-center text-gray-600">No blogs available.</p>
+                        <div className="text-center py-10 px-4">
+                            <img
+                                src="https://cdni.iconscout.com/illustration/premium/thumb/empty-box-2130356-1800926.png"
+                                alt="No Questions"
+                                className="w-40 h-40 mx-auto opacity-80"
+                            />
+                            <h2 className="text-xl font-semibold text-gray-700 mt-4">Oops! No Blogs Available</h2>
+                            <p className="text-gray-500 mt-1">Try selecting a different category or refresh the page.</p>
+                        </div>
                     ) : (
                         blogs.map((blog, index) => (
                             <BlogCard blog={blog} key={index} />

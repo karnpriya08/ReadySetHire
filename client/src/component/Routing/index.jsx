@@ -9,6 +9,8 @@ import Register from '../../pages/Register';
 import Header from '../Header';
 import Footer from '../Footer';
 import MyProfile from '../../pages/MyProfile';
+import TermsCondition from '../TermsCondition'
+import ErrorPage from '../Error';
 
 const index = () => {
 
@@ -25,6 +27,8 @@ const index = () => {
                     <Route path='/register' element={<Register />} />
                     <Route path='/about' element={<About />} />
                     <Route path="/profile" element={<MyProfile />} />
+                    <Route path="/t&c" element={<TermsCondition />} />
+                    <Route path="*" element={<ErrorPage />} />
                 </Routes>
 
                 <Footer />

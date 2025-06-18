@@ -16,6 +16,7 @@ const Login = () => {
   const [checkbox, setCheckbox] = useState(false);
   const [formErrors, setFormErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
 
   // redux state
   const { userInfo, loading, error } = useSelector((state) => state.auth);
@@ -51,11 +52,12 @@ const Login = () => {
       return;
     }
 // trigger login
+setHasSubmitted(true);
     dispatch(login(email, password));
   };
  // On login success: handle remember me + redirect
   useEffect(() => {
-    if (userInfo) {
+    if (userInfo && hasSubmitted) {
       if (checkbox) {
         // set item to local stoarge for remebering
         localStorage.setItem('rememberedEmail', email);
