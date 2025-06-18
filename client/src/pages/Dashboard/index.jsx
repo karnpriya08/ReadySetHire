@@ -105,10 +105,7 @@ const index = () => {
   return (
     <>
       <main className='mt-20 w-full'>
-        {/* header */}
-        <header className='bg bg-gradient-to-bl from-gray-200 via-cyan-700 to-cyan-800 p-5'>
-          <h1 className='text-4xl font-bold text-lime-400 text-center'>Govind </h1>
-        </header>
+        
         {/* banner */}
         <section className='mt-1 px-8 rounded-xl shadow-2xl bg-gradient-to-b from-gray-200 via-cyan-700 to-cyan-800'>
           <Banner />

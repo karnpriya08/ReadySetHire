@@ -109,12 +109,12 @@ export const uploadProfileImage = (image) => async (dispatch, getState) => {
     formData.append('image', image);
 
     // Get token here
-    const token = localStorage.getItem('token'); 
+    // const token = localStorage.getItem('token'); 
     // including token in header 
     const config = {
       headers: {
         'Content-Type': 'multipart/form-data',
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${userInfo.token}`,
       },
     };
     // POST request for uploading image 

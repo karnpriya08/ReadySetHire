@@ -67,8 +67,31 @@ const MyInterviews = () => {
 
       {/* No interviews found message */}
       {!loading && !error && interviews.length === 0 && (
-        <p className="text-gray-500 text-center">No interviews found for the selected filter.</p>
-      )}
+        <div className="flex flex-col items-center justify-center bg-gradient-to-bl from-gray-200 via-cyan-700 to-cyan-800 p-10 rounded-xl shadow-lg text-white">
+        {/* Illustration or Icon */}
+        <div className="text-6xl mb-4 animate-bounce">🎯</div>
+      
+        {/* Main Heading */}
+        <h1 className="text-3xl sm:text-4xl font-bold text-lime-300 mb-2 text-center">
+          No Interviews Found
+        </h1>
+      
+        {/* Subtext */}
+        <p className="text-center text-white text-lg mb-6 max-w-xl">
+          You haven’t booked any interviews yet. Explore available opportunities and schedule your next step toward your dream job!
+        </p>
+      
+        {/* Call-to-Action Button */}
+        <button
+          onClick={() => navigate('/interviews')}
+          className=" hover:bg-lime-600  font-semibold px-6 py-2 rounded-xl transition duration-200"
+        >
+          Book an Interview
+        </button>
+      </div>
+      
+     
+     )}
 
       {/* Interview cards */}
       {!loading && !error && interviews.length > 0 && (
