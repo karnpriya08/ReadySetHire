@@ -1,6 +1,6 @@
 import {
   USER_UPDATE_REQUEST, USER_UPDATE_SUCCESS, USER_UPDATE_FAIL,
-  USER_PROFILE_REQUEST, USER_PROFILE_SUCCESS, USER_PROFILE_FAIL
+  USER_PROFILE_REQUEST, USER_PROFILE_SUCCESS, USER_PROFILE_FAIL,LOGIN_SUCCESS
 } from '../actionTypes';
 import API from '../../utils/axios'
 
@@ -79,6 +79,10 @@ export const updateProfile = (userData, image) => async (dispatch, getState) => 
       type: USER_UPDATE_SUCCESS,
       payload: data
     })
+    dispatch({
+      type: 'LOGIN_SUCCESS', // this should match your authReducer
+      payload: { ...userInfo, ...data }
+    });
     // saving in local storage 
     localStorage.setItem('userInfo', JSON.stringify({ ...userInfo, ...data }));
     localStorage.setItem('userProfile', JSON.stringify({ ...data, email: userInfo.email }));

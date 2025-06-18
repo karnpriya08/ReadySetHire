@@ -79,7 +79,7 @@ const QuestionPage = () => {
                     <label htmlFor="category" className="text-lg font-semibold text-cyan-800"> Select Category: </label>
                     <select id="category" value={category}
                         onChange={handleChange}
-                        className="border rounded p-2 w-full sm:w-1/2 md:w-1/4 text-black">
+                        className="border rounded p-4 w-full sm:w-1/2 md:w-1/4 text-black">
                         {categoryOptions.map((option) => (
                             <option key={option.value} value={option.value}>
                                 {option.label}

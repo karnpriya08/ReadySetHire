@@ -36,13 +36,13 @@ const MyInterviews = () => {
   return (
     <div className="p-6 mt-16">
       {/* Header: Title + Filter Dropdown */}
-      <div className='bg-gradient-to-bl from-gray-100 via-gray-300 to-cyan-200 w-full px-4 py-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between text-cyan-800 mb-4'>
-        <h2 className="text-2xl font-bold">My Interviews</h2>
+      <div className='bg-gradient-to-bl from-gray-200 via-cyan-700 to-cyan-800 w-full px-4 py-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between text-cyan-800 mb-4'>
+        <h2 className="text-2xl font-bold text-lime-400">My Interviews</h2>
 
         <select
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
-          className="border p-2 rounded mt-2 sm:mt-0"
+          className="border p-4 rounded mt-2 sm:mt-0 text-lime"
           aria-label="Filter interviews"
         >
           <option value="upcoming">Upcoming Interviews</option>

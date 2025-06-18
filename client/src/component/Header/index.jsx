@@ -13,7 +13,7 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const token = useSelector((state) => state.auth.token);
-  const user = useSelector((state) => state.auth.user);  // make sure user is in auth state
+  const user = useSelector((state) => state.auth.userInfo);  // make sure user is in auth state
   const isLoggedIn = !!token;
 
   const dispatch = useDispatch();
@@ -70,7 +70,7 @@ const Header = () => {
         >
           {user && user.profileImage ? (
             <img
-              src={backendUrl + user.profileImage}
+            src={user?.profileImage?.startsWith('http') ? user.profileImage : `${backendUrl}${user.profileImage}`}
               alt="User profile"
               className='w-8 h-8 rounded-full object-cover'
             />
