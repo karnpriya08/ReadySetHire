@@ -38,7 +38,7 @@ export const login = (email, password) => async (dispatch) => {
         })
         // saving in local storage 
         localStorage.setItem('token', data.token);
-        localStorage.setItem('userInfo', JSON.stringify(data));
+        localStorage.setItem('userInfo', JSON.stringify(data.user));
     }
     // handling error dispatch
     catch (err) {

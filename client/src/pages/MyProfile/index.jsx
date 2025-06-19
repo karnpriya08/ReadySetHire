@@ -215,7 +215,7 @@ const index = () => {
 
           {/* resume upload  */}
           <div className="flex justify-center mt-10">
-            <ResumeUpload onUpload={handleResumeUpload} />
+          <ResumeUpload onUpload={handleResumeUpload} initialResumePath={user?.resume} />
           </div>
         </main>
       </div>

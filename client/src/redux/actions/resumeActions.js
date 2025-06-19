@@ -18,7 +18,7 @@ const uploadResume = (file) => async (dispatch, getState) => {
         // include token in header for authentication
         const config = {
             headers: {
-                Authorization: `Bearer ${userInfo?.token}`,
+                Authorization: `Bearer ${userInfo.token}`,
                 // 'Content-Type': 'multipart/form-data'
             }
         }

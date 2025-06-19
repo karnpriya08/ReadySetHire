@@ -12,9 +12,19 @@ const Header = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const token = useSelector((state) => state.auth.token);
-  const user = useSelector((state) => state.auth.userInfo);  // make sure user is in auth state
-  const isLoggedIn = !!token;
+  // Pull auth data from Redux
+  const reduxToken = useSelector((state) => state.auth.token);
+  const reduxUser = useSelector((state) => state.auth.userInfo);
+
+  // Fallback to localStorage in case Redux is empty (e.g., after refresh)
+  const localToken = localStorage.getItem("token");
+  const localUser = localStorage.getItem("userInfo")
+    ? JSON.parse(localStorage.getItem("userInfo"))
+    : null;
+
+  const token = reduxToken || localToken;
+  const user = reduxUser || localUser;
+  const isLoggedIn = !!token
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
