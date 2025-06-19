@@ -103,22 +103,22 @@ export const uploadProfileImage = (image) => async (dispatch, getState) => {
   try {
     // getiing token from redux
     const {
-      auth: { userInfo },
+      auth: { userInfo, token },
     } = getState();
     
     // checking user
-    if (!userInfo || !userInfo.token) throw new Error("Unauthorized");
+    const authToken = userInfo?.token || token;
+if (!authToken) throw new Error("Unauthorized User");
+
     // sending data as formdata
     const formData = new FormData();
     formData.append('image', image);
-
-    // Get token here
-    // const token = localStorage.getItem('token'); 
+        
     // including token in header 
     const config = {
       headers: {
         'Content-Type': 'multipart/form-data',
-        Authorization: `Bearer ${userInfo.token}`,
+        Authorization: `Bearer ${authToken}`,
       },
     };
     // POST request for uploading image 
