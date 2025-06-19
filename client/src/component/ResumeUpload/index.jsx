@@ -98,14 +98,14 @@ const ResumeUpload = ({ onUpload }) => {
           <div className="space-x-4">
             {/* View Resume */}
 
-            <a href={`http://localhost:3001/${resumePath}`}
+            <a href={`https://readysethire-roqk.onrender.com/${resumePath}`}
               target="_blank"
               rel="noopener noreferrer"
               className=" underline hover:text-blue-800">
               <button className='text-white'>View Resume</button>
             </a>
             {/* Download Resume */}
-            <a href={`http://localhost:3001/${resumePath}`}
+            <a href={`https://readysethire-roqk.onrender.com/${resumePath}`}
               download
               className="text-green-600 underline hover:text-green-800" >
               <button className='text-white'> Download Resume</button>
