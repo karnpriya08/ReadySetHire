@@ -108,9 +108,8 @@ const ResumeUpload = ({ onUpload }) => {
       <button
         onClick={handleUpload}
         disabled={loading}
-        className={`mt-4 px-4 py-2 rounded-xl font-semibold text-white ${
-          loading ? 'bg-gray-400 cursor-not-allowed' : 'bg-lime-500 hover:bg-lime-600'
-        }`}
+        className={`mt-4 px-4 py-2 rounded-xl font-semibold text-white ${loading ? 'bg-gray-400 cursor-not-allowed' : 'bg-lime-500 hover:bg-lime-600'
+          }`}
       >
         {loading ? 'Uploading...' : 'Upload Resume'}
       </button>

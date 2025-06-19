@@ -19,8 +19,8 @@ export const register = (name, email, password) => async (dispatch) => {
         dispatch({
             type: REGISTER_FAIL,
             payload: err.response && err.response.data.message
-            ? err.response.data.message
-            : err.message,
+                ? err.response.data.message
+                : err.message,
         })
     }
 }
@@ -53,12 +53,12 @@ export const logout = () => async (dispatch) => {
     try {
         // Clear Firebase session if user is signed in via Google
         await signOut(auth);
-      } catch (error) {
+    } catch (error) {
         console.warn("Firebase sign-out skipped or failed:", error.message);
-      }   
-      // Clear Redux and localStorage
-      dispatch({ type: LOGOUT });
-      localStorage.removeItem('token');
-      localStorage.removeItem('userInfo');
-      localStorage.removeItem("userProfile");
-    };
+    }
+    // Clear Redux and localStorage
+    dispatch({ type: LOGOUT });
+    localStorage.removeItem('token');
+    localStorage.removeItem('userInfo');
+    localStorage.removeItem("userProfile");
+};

@@ -24,7 +24,7 @@ export const authReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         userInfo: action.payload.user || action.payload,
-        token: action.payload.token || null,
+        token: action.payload.token || state.token ,
       };
 
     case REGISTER_SUCCESS:

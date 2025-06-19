@@ -4,7 +4,7 @@ import {
   FETCH_INTERVIEWS_REQUEST, FETCH_INTERVIEWS_SUCCESS, FETCH_INTERVIEWS_FAIL
 } from "../actionTypes";
 
-// FOR SCHEDULING OFFER
+// FOR SCHEDULING Interview
 const scheduleInitialState = {
   loading: false,
   success: false,

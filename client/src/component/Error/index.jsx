@@ -5,10 +5,9 @@ import Logo from '../../assets/images/logo1.png';
 
 const index = () => {
   return (
-    <div
-      className="min-h-screen w-full flex flex-col items-center justify-center bg-cover bg-center text-white px-4 py-12"
-      style={{ backgroundImage: `url(${Bg})` }}
-    >
+    <div  className="min-h-screen w-full flex flex-col items-center justify-center bg-cover bg-center text-white px-4 py-12"
+      style={{ backgroundImage: `url(${Bg})` }} >
+   
       {/* Logo */}
       <div className="flex items-center gap-4 mb-6">
         <img src={Logo} alt="logo" width={60} height={60} className="hover:scale-110 transition" />
@@ -25,12 +24,9 @@ const index = () => {
         <p className="text-cyan-200 mb-6">
           The page you’re looking for doesn’t exist or has been moved. Let’s get you back on track!
         </p>
-        <Link
-          to="/"
+        <Link  to="/"
           className="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-6 rounded-xl shadow-lg transition"
-        >
-          Go Home
-        </Link>
+        >Go Home</Link>       
       </div>
     </div>
   );

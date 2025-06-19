@@ -1,8 +1,8 @@
-import { USER_UPDATE_REQUEST, USER_UPDATE_SUCCESS, USER_UPDATE_FAIL,LOGOUT, USER_PROFILE_REQUEST, USER_PROFILE_SUCCESS, USER_PROFILE_FAIL } from "../actionTypes";
+import { USER_UPDATE_REQUEST, USER_UPDATE_SUCCESS, USER_UPDATE_FAIL, LOGOUT, USER_PROFILE_REQUEST, USER_PROFILE_SUCCESS, USER_PROFILE_FAIL } from "../actionTypes";
 
 export const initialState = {
     loading: false,
-    user: {}, 
+    user: {},
     error: null
 };
 
@@ -22,14 +22,15 @@ const userReducer = (state = initialState, action) => {
         case USER_PROFILE_FAIL:
             return { ...state, loading: false, error: action.payload };
 
-            case LOGOUT: // <-- ADD THIS
-      localStorage.removeItem("userProfile"); 
-      return {
-        ...state,
-        loading: false,
-        user: {}, 
-        error: null,
-      };
+        case LOGOUT:
+            // remove user from local storage
+            localStorage.removeItem("userProfile");
+            return {
+                ...state,
+                loading: false,
+                user: {},
+                error: null,
+            };
 
         default:
             return state;

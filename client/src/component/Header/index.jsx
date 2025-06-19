@@ -29,25 +29,30 @@ const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const backendUrl = "https://readysethire-roqk.onrender.com"; // your backend base URL
+  const backendUrl = "https://readysethire-roqk.onrender.com"; //  backend base URL
 
+  // handling click 
   const handleClick = () => {
     setModalOpen(!modalOpen);
     setMenuOpen(false);
   };
 
+  // toggle option menu and modal 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
     setModalOpen(false);
   };
 
+  // handling logout
   const handleLogout = () => {
+    // trigger logout
     dispatch(logout());
     toast.success("Successfully logged out");
     setModalOpen(false);
     navigate('/login');
   };
 
+  // to close menu and modal if click any where elese
   const closeAllMenus = () => {
     setModalOpen(false);
     setMenuOpen(false);
@@ -80,7 +85,7 @@ const Header = () => {
         >
           {user && user.profileImage ? (
             <img
-            src={user?.profileImage?.startsWith('http') ? user.profileImage : `${backendUrl}${user.profileImage}`}
+              src={user?.profileImage?.startsWith('http') ? user.profileImage : `${backendUrl}${user.profileImage}`}
               alt="User profile"
               className='w-8 h-8 rounded-full object-cover'
             />

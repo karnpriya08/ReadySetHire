@@ -12,7 +12,7 @@ export const scheduleInterview = (interviewData) => async (dispatch, getState) =
       auth: { userInfo },
     } = getState();
 
-     // Prepare headers for the API call
+    // Prepare headers for the API call
     const config = {
       headers: {
         Authorization: `Bearer ${userInfo.token}`,
@@ -46,13 +46,13 @@ export const fetchUserInterviews = (status = 'upcoming') => async (dispatch, get
     const {
       auth: { userInfo }
     } = getState();
-// Include token in headers for authentication
+    // Include token in headers for authentication
     const config = {
       headers: {
         Authorization: `Bearer ${userInfo.token}`,
       }
     };
-// GET request for fetching interview
+    // GET request for fetching interview
     const { data } = await API.get(`/interviews?status=${status}`, config);
 
     dispatch({
