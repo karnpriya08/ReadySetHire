@@ -83,7 +83,7 @@ const MyInterviews = () => {
       
         {/* Call-to-Action Button */}
         <button
-          onClick={() => navigate('/Interviews')}
+          onClick={() => navigate('/')}
           className=" hover:bg-lime-600  font-semibold px-6 py-2 rounded-xl transition duration-200"
         >
           Book an Interview
